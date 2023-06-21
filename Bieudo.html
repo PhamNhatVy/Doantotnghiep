@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> GIÁM SÁT CHÁY RỪNG</title>
+        <link rel="icon" type="image/x-icon" href="./tree.ico">
+        <link rel="stylesheet" href="Giamsat.css">
+        <script src="https://kit.fontawesome.com/67441f297f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        
+
+        
+    </head>
+
+    <body onload="initClock()">
+        <div id="background">
+            <header>
+                <a href="#" class="logo">HỆ THỐNG GIÁM SÁT CHÁY RỪNG</a>
+            </header>
+            <div class="real-day-time">
+                <!-- ngay thang nam realdate -->
+                <div class="date">
+                    <span id="dayname">Day</span>,
+                    <span id="month">Month</span>
+                    <span id="daynum">00</span>,
+                    <span id="year">Year</span>
+                </div>
+<!-- ----------------------------------------------------------------------------------- -->
+                <!-- dong ho realtime -->
+                <h2 id="current-time">12:00:00</h2>
+            </div>
+<!-- ------------------------------------------------------------------------------- -->
+            <nav>
+                <a href="./index.html" class="btn btn--giamsat">GIÁM SÁT </a>
+                <a href="./Bieudo.html" class="btn btn--bieudo">BIỂU ĐỒ</a>
+                <a href="./Bang.html" class="btn btn--bang">BẢNG</a>
+            </nav>
+
+            <h1>Biểu đồ nhiệt độ và độ ẩm</h1>
+            
+            <div class="charts">
+              <div id="chartDate"></div>
+              <div class="chart-container">
+                <canvas id="sensor1TemperatureChart"></canvas>
+              </div>
+              <div class="chart-container">
+                <canvas id="sensor1HumidityChart"></canvas>
+              </div>
+              <div class="chart-container">
+                <canvas id="sensor2TemperatureChart"></canvas>
+              </div>
+              <div class="chart-container">
+                <canvas id="sensor2HumidityChart"></canvas>
+              </div>
+              <div class="chart-container">
+                <canvas id="sensor3TemperatureChart"></canvas>
+              </div>
+              <div class="chart-container">
+                <canvas id="sensor3HumidityChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>           
+            
+
+            <section class="footer">
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+
+                <p class="copyright">
+                Copyright by Team @2023 <br>
+                    Pham Nhat Vy <br>
+                    Nguyen Hoang Phi Hung
+                </p>
+            </section>
+        </div> 
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+        <script src="Giamsat.js"></script>
+    </body>
+</html>

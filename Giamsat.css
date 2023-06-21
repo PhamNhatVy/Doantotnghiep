@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+#background {
+    background-image: url(./background1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    background-color: 	#40ea766f;
+    justify-content: center;
+    padding: 18px 0px;
+    align-items: center;
+    transition: background 1s;
+}
+
+.real-day-time {
+    width: 100%;
+    box-sizing: border-box;
+    margin:auto;
+    background-size:100%;
+    border-radius: 15px;
+}
+
+.date{
+    width: 100%;
+}
+
+.date, #current-time {
+    font-size: 30px;
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+nav{
+    height: 70px;
+    background-color: rgba(216, 178, 120, 0.499);
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    display: inline-block;
+    text-decoration:none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    background-color: transparent;
+    border:none;
+    outline:none;
+    color:#fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor:pointer;
+    transition: opacity 0.2s ease;
+    font-size:18px;
+}
+
+.btn:hover {
+opacity: 0.6;
+}
+.btn + .btn {
+margin-left :16px;
+}
+
+.btn--giamsat{
+    background-color:#2f6cd673;
+    box-shadow: 10px 10px 25px lightblue;
+}
+.btn--bieudo{
+background-color:#ffb702;
+box-shadow: 10px 10px 25px lightblue;
+}
+
+.btn--bang{
+background-color:#cd1e1ead;
+box-shadow: 10px 10px 25px lightblue;
+}
+
+.main {
+    width: 100%;
+    height: 500px;
+}
+
+.box1 {
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+}
+.charts{
+    width: 60%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.sensors {
+    width: 68%;
+    box-sizing: border-box;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sensors > div {
+    flex: 1;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+.sensor1, .sensor2, .sensor3,.cam1 {
+    flex: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.name{
+    font-size: 20px;
+    color: rgb(77, 73, 73);
+    margin: 10px;
+    text-align: center;
+}
+.data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; 
+}
+.data img {
+    width: 100px;
+    height: 100px;
+}
+.temp1,.humi1,.temp2,.humi2,.temp3,.humi3{
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.time1, .time2, .time3, .time4{
+    font-size: 20px;
+    align-items: center;
+    gap: 3px;
+}
+
+.cam1{
+    font-size: 26px;
+    align-items: center;
+    gap: 3px;
+}
+
+.logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-left: 50px;
+}
+h1 {
+    text-align: center;
+    color: #f9f9f9;
+    padding-top: 10px;
+    padding-left: 50px;
+    font-size: 20px;
+  }
+
+h2{
+    text-align: center;
+    color: #04611fe4;
+    padding-top: 10px;
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+h3 {
+    text-align: center;
+    color: #f9f9f9;
+    padding-top: 10px;
+    padding-left: 50px;
+    font-size: 20px;
+  }
+
+.box2 {
+    background-color: white;
+}
+.box3 {
+    width: 70%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.sensor {
+margin-bottom: 40px;
+text-align: center;
+}
+
+.sensor h4 {
+text-align: center;
+color: #f9f9f9;
+}
+
+table {
+border-collapse: collapse;
+width: 100%;
+}
+
+table th, table td {
+border: 1px solid #ddd;
+color: #000000;
+padding: 8px;
+text-align: center;
+}
+
+table th {
+background-color: #3fe08a90;
+}
+
+table tbody tr:nth-child(even) {
+background-color: #f9f9f9;
+}
+.chart-row {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+
+.chart-container {
+width: 100%;
+max-width: 800px; /* Tuỳ chỉnh kích thước container của biểu đồ */
+height: 300px; /* Tuỳ chỉnh kích thước container của biểu đồ */
+margin: auto;
+}
+
+.footer{
+    padding: 40px 0;
+    background-color: #04540e ;
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #fff;
+}
+
+.footer .social a{
+    font-size: 30px;
+    color: inherit;
+    padding: 0px 18px;
+}
+
+.footer .social a:hover{
+    opacity: 0.9;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer a:hover{
+    opacity: 1;
+}
+
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+}
+

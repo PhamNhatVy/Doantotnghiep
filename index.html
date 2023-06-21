@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> GIÁM SÁT CHÁY RỪNG</title>
+        <link rel="icon" type="image/x-icon" href="./tree.ico">
+        <link rel="stylesheet" href="Giamsat.css">
+        <script src="https://kit.fontawesome.com/67441f297f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+        
+    </head>
+
+    <body onload="initClock()">
+        <div id="background">
+            <header>
+                <a href="#" class="logo">HỆ THỐNG GIÁM SÁT CHÁY RỪNG</a>
+            </header>
+            <div class="real-day-time">
+                <!-- ngay thang nam realdate -->
+                <div class="date">
+                    <span id="dayname">Day</span>,
+                    <span id="month">Month</span>
+                    <span id="daynum">00</span>,
+                    <span id="year">Year</span>
+                </div>
+<!-- ----------------------------------------------------------------------------------- -->
+                <!-- dong ho realtime -->
+                <h2 id="current-time">12:00:00</h2>
+            </div>
+<!-- ------------------------------------------------------------------------------- -->
+            <nav>
+                <a href="./Giamsat.html" class="btn btn--giamsat">GIÁM SÁT </a>
+                <a href="./Bieudo.html" class="btn btn--bieudo">BIỂU ĐỒ</a>
+                <a href="./Bang.html" class="btn btn--bang">BẢNG</a>
+            </nav>
+
+            <div class="main">
+                <div class="box1">
+                        <div class="sensors">
+                            <div class="sensor1">
+                                <div class="name">SENSOR1</div>
+                                <div class="data">   
+                                    <img src="./img/nhietdo.png"  alt="Temperature Icon">
+                                    <div id="sensor1TemperatureValue" class="temp1">Nhiệt độ:Loading...</div>
+                                    <img src="./img/doam.png"  alt="Humidity Icon">
+                                    <div id="sensor1HumidityValue" class="humi1">Độ ẩm:Loading...</div>
+                                </div>
+                                <div id="sensor1TimeValue"   class="time1">Thời gian:</div>
+                            </div>
+                            <div class="sensor2">
+                                <div class="name">SENSOR2</div>
+                                <div class="data">
+                                    <img src="./img/nhietdo.png"  alt="Temperature Icon">
+                                    <div id="sensor2TemperatureValue" class="temp2">Nhiệt độ:Loading...</div>
+                                    <img src="./img/doam.png"  alt="Humidity Icon">
+                                    <div id="sensor2HumidityValue" class="humi2">Độ ẩm:Loading...</div>
+                                </div>
+                                <div id="sensor2TimeValue"   class="time2">Thời gian:</div>
+                            </div>
+                        </div>
+                        <div class="sensors">
+                            <div class="sensor3">
+                                <div class="name">SENSOR3</div>
+                                <div class="data">
+                                    <img src="./img/nhietdo.png"  alt="Temperature Icon">
+                                    <div id="sensor3TemperatureValue" class="temp3">Nhiệt độ:Loading...</div>
+                                    <img src="./img/doam.png"  alt="Humidity Icon">
+                                    <div id="sensor3HumidityValue" class="humi3">Độ ẩm:Loading...</div>
+                                </div>
+                                <div id="sensor3TimeValue"  class="time3" >Thời gian:</div>
+                            </div>
+                            <div class="cam1">
+                                <div class="name">CAM1</div>
+                                <div class="data">
+                                    <img src="./img/cam.png"  alt="Temperature Icon">
+                                    <div id="warning-container" class="cam1"></div>
+                                </div>
+                                <div id="timestamp-container" class="time4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>           
+            
+
+            <section class="footer">
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+
+                <p class="copyright">
+                Copyright by Team @2023 <br>
+                    Pham Nhat Vy <br>
+                    Nguyen Hoang Phi Hung
+                </p>
+            </section>
+        </div> 
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <!-- <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> -->
+        <script src="Giamsat.js"></script>
+    </body>
+</html>
